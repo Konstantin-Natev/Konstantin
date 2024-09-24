@@ -1,0 +1,26 @@
+.boxContainer {
+    display: flex;
+}
+
+.drawer {
+  width: var(--drawer-width);
+  flex-shrink: 0;
+}
+
+.drawerPaper {
+  width: var(--drawer-width);
+  box-sizing: border-box;
+}
+
+.iconButton {
+  margin-right: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.chevronIconContainer {
+  display: flex;
+  justify-content: flex-end;
+}
