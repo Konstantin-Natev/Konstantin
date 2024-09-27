@@ -1,3 +1,14 @@
 :root {
   --drawer-width: 240px;
 }
+
+body {
+  margin:  0;
+  background-image: url("/background-image.svg");
+  color: #999;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-color: #2b2b2b;
+  font-family: Avenir Next, Avenir, Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+}
