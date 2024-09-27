@@ -2,7 +2,10 @@
   --drawer-width: 240px;
 }
 
+html,
 body {
+  overflow-y: auto;
+  overflow-x: hidden;
   margin:  0;
   background-image: url("/background-image.svg");
   color: #999;

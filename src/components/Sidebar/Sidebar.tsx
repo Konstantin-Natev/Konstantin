@@ -63,21 +63,12 @@ export const Sidebar = () => {
                     </ListItemButton>
                 </ListItem>
 
-                <ListItem key={'About'} disablePadding>
-                    <ListItemButton>
-                    <ListItemIcon>
-                        <PermIdentityIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={'About me'} />
-                    </ListItemButton>
-                </ListItem>
-
-                <ListItem key={'Certificates'} disablePadding>
+                <ListItem key={'Achievements'} disablePadding>
                     <ListItemButton>
                     <ListItemIcon>
                         <WorkspacePremiumIcon />
                     </ListItemIcon>
-                    <ListItemText primary={'Certificates'} />
+                    <ListItemText primary={'Achievements'} />
                     </ListItemButton>
                 </ListItem>
 

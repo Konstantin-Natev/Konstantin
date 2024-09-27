@@ -9,7 +9,7 @@ export const Home = () => {
             <Stack className={styles.titleSection}>
                 <Grid2 className={styles.subheading}>
                     <Grid2 className={styles.headline}></Grid2>
-                    <Typography className={styles.subheadingText}>about</Typography>
+                    <Typography className={styles.subheadingText}>home</Typography>
                 </Grid2>
                 <Grid2 className={styles.mainTitleSection}>
                     <Typography  className={styles.mainTitle}>Hey, I'm Konstantin Natev</Typography>

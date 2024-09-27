@@ -4,6 +4,7 @@ import { Sidebar } from './components/Sidebar/Sidebar';
 import { Home } from './components/Home/Home';
 import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
 import { theme } from './theme';
+import { Achievements } from './components/Achievements/Achievements';
 
 function App() {
  
@@ -13,6 +14,7 @@ function App() {
         <Grid2>
           <Sidebar />
           <Home />
+          <Achievements />
         </Grid2>
       </ThemeProvider>
     </StyledEngineProvider>

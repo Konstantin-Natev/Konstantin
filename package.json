@@ -14,9 +14,11 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.1",
     "@mui/material": "^6.1.1",
+    "@splidejs/react-splide": "^0.7.12",
     "react": "^18.3.1",
     "react-css-modules": "^4.7.11",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-material-ui-carousel": "^3.4.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
