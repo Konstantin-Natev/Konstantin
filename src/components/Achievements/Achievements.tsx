@@ -23,6 +23,7 @@ export const Achievements = () => {
         <Grid container className={styles.root}>
             <Stack className={styles.titleSection}>
                 <Grid container className={styles.subheading}>
+                    <Grid2 className={styles.headline}></Grid2>
                     <Typography className={styles.subheadingText}>achievements</Typography>
                 </Grid>
                 <Grid container className={styles.mainTitleSection}>
