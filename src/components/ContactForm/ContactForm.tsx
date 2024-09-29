@@ -19,7 +19,7 @@ const validationSchema = yup.object({
   email: yup.string().matches(emailPattern, "Моля въведете валиден имейл") .required("Полето е задължително"),
 });
 
-export const ContactForm = () => {
+export const ContactForm = ({elementRef} : {elementRef: React.RefObject<HTMLDivElement>}) => {
     const form = useRef(null);
 
     const formikEmailForm = useFormik({
@@ -38,9 +38,8 @@ export const ContactForm = () => {
     });
 
     const sendEmail = () => {
-        console.log("here");
         
-        emailjs.sendForm('service_stclons', 'template_0t96lvf', form.current, "heMBs2eh2ICqWQ-gn")
+        emailjs.sendForm('service_stclons', 'template_0t96lvf', form!.current!, "heMBs2eh2ICqWQ-gn")
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -49,7 +48,7 @@ export const ContactForm = () => {
     };
 
     return (
-        <Grid2 className={styles.root}>
+        <Grid2 ref={elementRef} className={styles.root}>
             <Stack className={styles.titleSection}>
                 <Grid2 className={styles.subheading}>
                     <Grid2 className={styles.headline}></Grid2>

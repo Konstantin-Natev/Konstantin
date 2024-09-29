@@ -2,7 +2,7 @@ import { Grid2, Stack, Typography } from "@mui/material";
 import styles from "./home.module.css";
 import { CustomButton } from "../CustomComponents/CustomButton/CustomButton";
 
-export const Home = () => {
+export const Home = ({handleClick} : {handleClick: () => void}) => {
 
     return (
         <Grid2 className={styles.root}>
@@ -17,7 +17,7 @@ export const Home = () => {
                 </Grid2>
             </Stack>
 
-            <CustomButton text={"GET IN TOUCH"} variant={"outlined"} />
+            <CustomButton text={"GET IN TOUCH"} variant={"outlined"} onClick={handleClick}/>
         </Grid2>
     );
 }
