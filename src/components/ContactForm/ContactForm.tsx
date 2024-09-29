@@ -42,6 +42,7 @@ export const ContactForm = ({elementRef} : {elementRef: React.RefObject<HTMLDivE
         emailjs.sendForm('service_stclons', 'template_0t96lvf', form!.current!, "heMBs2eh2ICqWQ-gn")
             .then((result) => {
                 console.log(result.text);
+                formikEmailForm.resetForm();
             }, (error) => {
                 console.log(error.text);
             });
