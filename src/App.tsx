@@ -5,16 +5,21 @@ import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
 import { theme } from './theme';
 import { Achievements } from './components/Achievements/Achievements';
 import { ContactForm } from './components/ContactForm/ContactForm';
+import {useRef} from 'react';
 
 function App() {
- 
+  const elementRef = useRef<HTMLDivElement>(null);
+  const handleClick = () => {
+    elementRef.current?.scrollIntoView({behavior: 'smooth'});
+  };
+
   return(
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <Grid2>
-          <Home />
+          <Home handleClick={handleClick}/>
           <Achievements />
-          <ContactForm />
+          <ContactForm elementRef={elementRef}/>
         </Grid2>
       </ThemeProvider>
     </StyledEngineProvider>
