@@ -1,107 +1,36 @@
 .root {
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 7.5rem 10rem 0rem 10rem;
-    background-color: #2b2b2b;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 7.5rem 10rem 0rem 10rem;
+  background-color: #2b2b2b;
 }
 
 .titleSection {
-    justify-content: center;
-    box-sizing: border-box;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 40px;
 }
-
-.subheading {
-    letter-spacing: .125em;
-    font-weight: 600;
-    display: flex;
-    line-height: 1.4;
-    margin-bottom: 2rem;
-}
-
-.headline {
-    font-size: 0;
-    line-height: 0;
-    margin: 6px 10px 0 0;
-    position: static;
-    vertical-align: middle;
-}
-
-.headline:before {
-    border-left: 5px solid #bc956a;
-    border-right: 5px solid #bc956a;
-    margin-right: 5px;
-    width: 5px;
-    animation-delay: 0.6s;
-    transition: border 0.4s ease;
-}
-
-.headline:after {
-    background: #bc956a;
-    width: 40px;
-    animation-delay: 0.8s;
-}
-
-.headline:before ,.headline:after {
-    content: '';
-    display: inline-block;
-    height: 1px;
-}
-
-.subheadingText {
-    font-size: 0.625rem; /* 10px */
-    letter-spacing: .125em;
-    font-weight: 600;
-    margin-bottom: 0;
-    color: #bc956a;
-    text-transform: uppercase;
-    transition: color 0.4s ease;
-}
-
-.mainTitleSection {
-    max-width: 800px;
-}
-
-.mainTitle {
-    margin-top: 0;
-    font-size: 3.375rem; /* 54px */
-    font-weight: 700;
-    line-height: 1.25;
-    color: #fff;
-    transition: color 0.4s ease;
-}
-
-.contentContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 
 .skillsContainer {
   margin-top:60px;
 }
 
-.divider {
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px;
+.mainTitle {
+  font-size: 2.75rem;
 }
 
-.subtitle {
-    font-size: 14px;
-    color: #fff;
-    font-weight: 500;
-    line-height: 1.5;
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .skillsAndContactsContainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
 }
 
 .skillsList {
@@ -109,45 +38,27 @@
   column-gap: 20px;
 }
 
-.skillItem {
-  margin-bottom: 10px;
-}
-
-.linkItems {
-    font-size: 12px;
-    color: #999;
-    text-decoration: none;
-    margin-bottom: 10px;
-    transition: color ease .4s;
-}
-
-.linkItems:hover {
-    background-color: transparent;
-    color: #fefefe;
-    transition: color ease .4s;
-}
-
-.input {
-  margin-top: 8px;
-  border-radius: 8px;
-  border-color: #ffffff;
-  border-width: 1px !important;
-}
-
-.input input {
-  border-radius: 10px;
-  border-color: #ffffff;
-}
-
-.input fieldset {
-  border-radius: 8px;
-  border-color: #dfe9ee;
-}
-
 .formContainer {
   display: flex;
   flex-direction: column;
-  margin-top:60px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input input {
+  background-color: #fff;
+  border-radius: 8px;
+  border-color: #ffffff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.input input:focus {
+  background-color: #fff;
+  border-color: #ffffff;
 }
 
 .textarea {
@@ -160,7 +71,7 @@
   border: 1px solid #dfe9ee;
   resize: none;
   box-sizing: border-box;
-  background-color: transparent;
+  background-color: #fff;
   transition: border-color 0.3s ease-in-out;
   font-family: inherit;
 }
@@ -168,16 +79,59 @@
 .textarea:focus {
   outline: none;
   background-color: #fff;
-  transition: background-color 0.4s ease;
-}
-
-.input input:focus {
-  outline: none;
-  background-color: #fff;
   border-color: #fff;
   transition: background-color 0.4s ease;
 }
 
-.noFocusOutline {
-    border-color: #ffffff !important;
+.linkItems {
+  font-size: 12px;
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color ease 0.4s;
+}
+
+.linkItems:hover {
+  color: #fefefe;
+  transition: color ease 0.4s;
+}
+
+
+@media (max-width: 1200px) {
+  .root {
+    padding: 7rem 6rem 0rem 6rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .root {
+    padding: 5rem 4rem 0rem 4rem;
+  }
+
+  .mainTitle {
+    font-size: 2.25rem;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .root {
+    padding: 4rem 2rem 0rem 2rem;
+  }
+
+  .formContainer {
+    width: 100%;
+  }
+
+  .skillsList {
+    column-count: 1;
+  }
+  
+  .mainTitle {
+    font-size: 1.75rem;
+  }
 }

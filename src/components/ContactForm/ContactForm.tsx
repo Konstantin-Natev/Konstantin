@@ -60,8 +60,8 @@ export const ContactForm = ({elementRef} : {elementRef: React.RefObject<HTMLDivE
                 </Grid2>
             </Stack>
 
-            <Grid container className={styles.contentContainer}>
-                <Grid item xs={3} className={styles.skillsAndContactsContainer}>
+            <Grid container spacing={4} className={styles.contentContainer}>
+                <Grid item xs={12} md={4} className={styles.skillsAndContactsContainer}>
                     <Stack className={styles.skillsContainer}>
                         <Typography className={styles.subtitle}>Skills</Typography>
                         <Divider className={styles.divider} />
@@ -83,9 +83,9 @@ export const ContactForm = ({elementRef} : {elementRef: React.RefObject<HTMLDivE
                     </Stack>
                 </Grid>
 
-                <Grid item xs={5} className={styles.formContainer}>
+                <Grid item xs={12} md={6} className={styles.formContainer}>
                     <form ref={form} onSubmit={formikEmailForm.handleSubmit}>
-                        <Grid2 marginBottom={"40px"}>
+                        <Grid2 marginBottom={"20px"}>
                             <Typography className={styles.label}>Name</Typography>
                             <TextField
                                 id={"name"}
@@ -115,7 +115,7 @@ export const ContactForm = ({elementRef} : {elementRef: React.RefObject<HTMLDivE
                             />
                         </Grid2>
 
-                        <Grid2 marginBottom={"40px"}>
+                        <Grid2 marginBottom={"20px"}>
                             <Typography className={styles.label}>Email</Typography>
                             <TextField
                                 id={"email"}
@@ -145,22 +145,20 @@ export const ContactForm = ({elementRef} : {elementRef: React.RefObject<HTMLDivE
                             />
                         </Grid2>
 
-                        <Grid2 marginBottom={"20px"}>
+                        <Grid item xs={12} marginBottom={"30px"}>
                             <Typography className={styles.label}>Message</Typography>
                             <TextareaAutosize
                                 id="message"
                                 name="message"
                                 value={formikEmailForm.values.message}
-                                onChange={(e) => {
-                                    formikEmailForm.handleChange(e);
-                                }}
+                                onChange={formikEmailForm.handleChange}
                                 className={styles.textarea}
+                                minRows={5}
                             />
-                        </Grid2>
+                        </Grid>
 
                         <CustomButton text={"Submit Message"} variant={"outlined"} type="submit" />
                     </form>
-
                 </Grid>
             </Grid>
         </Grid2>
