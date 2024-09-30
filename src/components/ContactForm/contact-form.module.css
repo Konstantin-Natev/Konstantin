@@ -38,6 +38,53 @@
   column-gap: 20px;
 }
 
+.headline {
+  font-size: 0;
+  line-height: 0;
+  margin: 6px 10px 0 0;
+  position: static;
+  vertical-align: middle;
+}
+
+.headline:before {
+  border-left: 5px solid #bc956a;
+  border-right: 5px solid #bc956a;
+  margin-right: 5px;
+  width: 5px;
+  animation-delay: 0.6s;
+  transition: border 0.4s ease;
+}
+
+.headline:after {
+  background: #bc956a;
+  width: 40px;
+  animation-delay: 0.8s;
+}
+
+.headline:before, .headline:after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+}
+
+.subheadingText {
+    font-size: 0.625rem; /* 10px */
+    letter-spacing: .125em;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #bc956a;
+    text-transform: uppercase;
+    transition: color 0.4s ease;
+}
+
+.subheading {
+    letter-spacing: .125em;
+    font-weight: 600;
+    display: flex;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
 .formContainer {
   display: flex;
   flex-direction: column;
