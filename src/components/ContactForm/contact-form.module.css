@@ -131,11 +131,15 @@
 }
 
 .linkItems {
-  font-size: 12px;
+  font-size: 14px;
   color: #999;
   text-decoration: none;
   margin-bottom: 10px;
   transition: color ease 0.4s;
+}
+
+.skillItem {
+  font-size: 14px;
 }
 
 .linkItems:hover {
@@ -160,8 +164,23 @@
   }
 
   .contentContainer {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+  }
+
+  .skillsAndContactsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+  }
+
+  .skillsContainer {
+    margin-top:30px;
+  }
+
+  .linkItems {
+    font-size: 12px;
   }
 }
 
